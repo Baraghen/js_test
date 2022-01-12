@@ -15,7 +15,6 @@ function getAllUsers(url){
         .then((res) => res.json())
         .then((data) => {
             const users = data.data;
-            console.log(users)
             let output = '';
             users.forEach(user => {
                 output += `
@@ -38,7 +37,6 @@ function getUser(url, userId){
         .then((res) => res.json())
         .then((data) => {
             const user = data.data;
-            console.log(user)
             document.getElementById('userModal').innerHTML = `
                 <div id="user${user.id}" class="user">
                     <div>
