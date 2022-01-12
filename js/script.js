@@ -1,5 +1,5 @@
 const url = 'https://reqres.in/api/users/'
-
+// Skapar eventlisteners som andänvds för modalen som justerar css för att visa/dölja.
 const userModal = document.querySelector('.modal')
 const bodyBlackout = document.querySelector('.bodyBlackout')
 
@@ -8,7 +8,8 @@ bodyBlackout.addEventListener('click', () => {
     userModal.classList.add('modalClosed')
     userModal.classList.remove('modalOpen')
 })
-
+// Här hämtas alla användare och skriver ut dem i separata div:ar som alla har ett eget onclick event för att
+// öppna modalen med rätt information.
 function getAllUsers(url){
     fetch(url)
         .then((res) => res.json())
@@ -31,6 +32,7 @@ function getAllUsers(url){
             document.getElementById('output').innerHTML = output;
         });
 }
+// Denna funktion används för att göra ett anrop mot api:t så endast informationen för rätt användare hämtas.
 function getUser(url, userId){
     fetch(url+userId)
         .then((res) => res.json())
