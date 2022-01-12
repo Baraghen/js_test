@@ -13,7 +13,7 @@ html, body {
     text-align: center;
     cursor: pointer;
 }
-/* Classer för mörkläggning */
+/* Klasser för mörkläggning */
 .bodyBlackout {
     position: absolute;
     z-index: 1010;

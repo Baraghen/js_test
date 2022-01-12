@@ -31,7 +31,8 @@ function getAllUsers(url){
             document.getElementById('output').innerHTML = output;
         });
 }
-// Denna funktion används för att göra ett anrop mot api:t så endast informationen för rätt användare hämtas.
+// Denna funktion körs när man klickar på en användare och skickar då ett anrop mot api:t så endast informationen för
+// rätt användare  och läggs in i modalen.
 function getUser(url, userId){
     fetch(url+userId)
         .then((res) => res.json())
